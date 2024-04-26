@@ -18,13 +18,21 @@ from django.contrib import admin
 from django.urls import path, include
 from . import views
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.homePage,name=''),
-    path("login", views.loginPage, name="loginPage"),
-    path("Register",views.registrationPage, name="register"),
-    path("",include("adminapp.urls")),
-    path("about", views.aboutusPage, name="aboutPage"),
-    path("contact", views.contactusPage, name="contactPage"),
+    path("", views.homePage, name="home"),
+    path("login", views.loginPage, name="login"),
+    path("contactus", views.contactPage, name="contact"),
+    path("aboutus", views.aboutPage, name="about"),
+    path("Register", views.registrationPage, name="register"),
+    path("insert", views.insertpage, name="insert"),
+    path("update",views.updatepage,name="update"),
+    path("delete",views.deletepage,name="delete"),
+    path("insertvehicle",views.insertvehiclepage,name="insertvehicle"),
+    path("updatevehicle",views.updatevehiclepage,name="updatevehicle"),
+    path("deletevehicle",views.deletevehiclepage,name="deletevehicle"),
+    path("feedback",views.feedbackpage,name="feedback"),
+    path("payment",views.paymentpage,name="payment"),
+    path("", include("adminapp.urls")),
+
 ]

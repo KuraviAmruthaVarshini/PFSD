@@ -8,6 +8,7 @@ class Admin(models.Model):
     class Meta:
         db_table = "ttmadmin_table"
 class Register(models.Model):
+    objects = None
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=30, blank=False)
     address = models.CharField(max_length=30, blank=False)
@@ -26,3 +27,6 @@ class Packages(models.Model):
     class Meta:
         db_table = "package_table"
 
+
+class Vehicle:
+    pass

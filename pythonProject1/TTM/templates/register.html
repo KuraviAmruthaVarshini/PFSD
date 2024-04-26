@@ -1,35 +1,35 @@
 {% extends 'index.html' %}
 {% block 'b1' %}
-<h2 align="center"><font color="brown"> Sign-Up </font>  </h2>
+<h2 align="center"><font color="brown"> Sign-Up </font></h2>
 <form method="post" action="{% url 'checkregistration'  %}">
     {% csrf_token %}
-    <table align="center" border="2">
+    <table align="center" >
         <tr>
-            <td> Enter Name </td>
+            <td> Enter Name</td>
             <td><input type="text" name="name" required/></td>
         </tr>
         <tr>
-            <td> Enter Address </td>
+            <td> Enter Address</td>
             <td><input type="text" name="addr" required/></td>
         </tr>
         <tr>
-            <td> Enter Email Id </td>
+            <td> Enter Email Id</td>
             <td><input type="text" name="email" required/></td>
         </tr>
         <tr>
-            <td> Enter Phone No </td>
+            <td> Enter Phone No</td>
             <td><input type="text" name="phno" required/></td>
         </tr>
         <tr>
-            <td> User Name </td>
+            <td> User Name</td>
             <td><input type="text" name="uname" required/></td>
         </tr>
         <tr>
-            <td> Password </td>
+            <td> Password</td>
             <td><input type="password" name="pwd" required/></td>
         </tr>
         <tr>
-            <td> Confirm Password </td>
+            <td> Confirm Password</td>
             <td><input type="password" name="cpwd" required/></td>
         </tr>
         <tr>
@@ -41,7 +41,8 @@
 </form>
 <div>
     {% for i in messages %}
-    <h4><font color="brown"> {{i}}</font> </h4>
+    <h4><font color="red"> {{i}} </font></h4>
     {% endfor %}
 </div>
+
 {% endblock %}
